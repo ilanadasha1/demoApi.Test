@@ -13,7 +13,6 @@ namespace demoApi.Test
     [AllureNUnit]
     [TestFixture]
     [AllureSubSuite("Demo")]
-    [AllureSeverity(SeverityLevel.critical)]
     public class HandlerApiShould : TestBase
     {
         [Test(Description = "Return Ok when Setting Handler Position succedded")]
@@ -22,6 +21,7 @@ namespace demoApi.Test
         [AllureTag("Status", "Move")]
         [AllureIssue("Issue#1")]
         [AllureFeature("Move")]
+        [AllureSeverity(SeverityLevel.critical)]
         public async Task ReturnOkOnSetHandlerPosition()
         {
             //Arrange
@@ -39,6 +39,7 @@ namespace demoApi.Test
         [AllureSubSuite("Move")]
         [AllureTag("Status", "Move")]
         [AllureFeature("Move")]
+        [AllureSeverity(SeverityLevel.minor)]
         public async Task ReturnAckOnSetHandlerPosition()
         {
             //Arrange
@@ -56,6 +57,7 @@ namespace demoApi.Test
         [AllureSubSuite("Move")]
         [AllureTag("Position")]
         [AllureFeature("Move")]
+        [AllureSeverity(SeverityLevel.critical)]
         [TestCase(5,23,55)]
         [TestCase(54, -2, 0)]
             public async Task ReturnPositionOnSetHandlerPosition(int x, int y, int z)
@@ -78,6 +80,7 @@ namespace demoApi.Test
         [AllureSubSuite("Get")]
         [AllureTag("Position", "Get")]
         [AllureFeature("Get")]
+        [AllureSeverity(SeverityLevel.blocker)]
         public async Task ReturnCurrentPositionOnGetHandlerPosition()
         {
             //Arrange
@@ -105,6 +108,7 @@ namespace demoApi.Test
         [AllureSubSuite("Save")]
         [AllureTag("Position", "Save")]
         [AllureFeature("Save")]
+        [AllureSeverity(SeverityLevel.critical)]
         public async Task ReturnPositionOnSave()
         {
             // Arrange + Act
@@ -119,7 +123,7 @@ namespace demoApi.Test
         [AllureSubSuite("Save")]
         [AllureTag("Status")]
         [AllureFeature("Save")]
-       
+        [AllureSeverity(SeverityLevel.critical)]
         public async Task ReturnOKOnSaveHandlerPosition()
         {
             // Arrange + Act
@@ -135,7 +139,7 @@ namespace demoApi.Test
         [AllureSubSuite("Lock")]
         [AllureTag("Status", "Lock")]
         [AllureFeature("Lock")]
-       
+        [AllureSeverity(SeverityLevel.normal)]
         public async Task ReturnOKOnLockHandlerPosition()
         {
             // Arrange + Act
@@ -151,7 +155,7 @@ namespace demoApi.Test
         [AllureSubSuite("Lock")]
         [AllureTag("Position", "Lock")]
         [AllureFeature("Lock")]
-        
+        [AllureSeverity(SeverityLevel.normal)]
         public async Task ReturnPositionZeroOnLockHandlerPosition()
         {
             // Arrange + Act
@@ -169,6 +173,7 @@ namespace demoApi.Test
         [AllureSubSuite("Lock")]
         [AllureTag("Posetive", "Lock")]
         [AllureFeature("Lock")]
+        [AllureSeverity(SeverityLevel.critical)]
         public async Task ReturnPositionIdNullOnLockHandlerPosition()
         {
             // Arrange + Act
@@ -185,6 +190,7 @@ namespace demoApi.Test
         [AllureTag("Posetive", "UnLock")]
         [AllureIssue("Issue#2")]
         [AllureFeature("UnLock")]
+        [AllureSeverity(SeverityLevel.critical)]
         public async Task ReturnOKOnUnLockHandlerPosition()
         {
             // Arrange + Act

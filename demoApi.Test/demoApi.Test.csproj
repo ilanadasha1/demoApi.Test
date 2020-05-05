@@ -36,7 +36,6 @@
     <ProjectReference Include="..\demoApi.Test.SDK\demoApi.Test.SDK.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Tests\Functional\Acceptance\" />
     <Folder Include="Tests\Functional\Sanity\" />
     <Folder Include="Tests\Functional\Regression\" />

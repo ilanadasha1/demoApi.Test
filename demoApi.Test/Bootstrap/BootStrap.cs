@@ -60,7 +60,6 @@ namespace demoApi.Test.Bootstrap
             
             container.RegisterInstance(logger);
             container.RegisterSingleton<ILogHandler, LogHandler>();
-            //container.Register<CustomLogHandler>(Lifestyle.Scoped);
 
             container.Verify();
             ServicePointManager.DefaultConnectionLimit = 10000;
